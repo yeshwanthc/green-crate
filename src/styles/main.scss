@@ -1,0 +1,28 @@
+@use 'sass:color';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --color-primary: theme('colors.primary.500');
+  --color-secondary: theme('colors.secondary.500');
+
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(
+    45deg,
+    theme('colors.primary.500'),
+    theme('colors.secondary.500')
+  );
+}
